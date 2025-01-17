@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salahud Deen Academy</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    
+    <!-- Header Section -->
+    <div class="top-bar">
+        <div>
+            <a href="mailto:info@salahuddeenacademy.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
+            <a href="https://youtube.com"><i class="fab fa-youtube"></i></a>
+            <a href="https://tiktok.com"><i class="fab fa-tiktok"></i></a>
+            <a href="https://wa.me/1234567890"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </div>
+    
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-book"></i> Salahud Deen Academy
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admission.html">Admission</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                </ul>
+                <select class="language-select ms-3" onchange="changeLanguage(this.value)">
+                    <option value="en">English</option>
+                    <option value="ar">Arabic</option>
+                    <option value="bn">Bangla</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+     <!-- Main Content -->
+     <main class="container mt-5 text-center animated-text">
+        <h1>Welcome to Salahud Deen Academy</h1>
+        <p class="lead">Conquering Hearts</p>
+        <p>Your gateway to quality online education in Arabic.</p>
+    </main>
+
+    <!-- Master Arabic with Us Section -->
+    <section class="container text-center master-arabic">
+        <h2>Master Arabic with Us</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="p-4 bg-dark text-white rounded">
+                    <i class="fas fa-user-graduate fa-3x mb-3"></i>
+                    <h4>Expert Instructors</h4>
+                    <p>Learn from certified professionals with years of experience.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 bg-dark text-white rounded">
+                    <i class="fas fa-clock fa-3x mb-3"></i>
+                    <h4>Flexible Learning</h4>
+                    <p>Access courses anytime, anywhere with live and recorded sessions.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 bg-dark text-white rounded">
+                    <i class="fas fa-certificate fa-3x mb-3"></i>
+                    <h4>Certification</h4>
+                    <p>Receive recognized certificates upon course completion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+    <!-- Enroll Section -->
+    <section class="enroll">
+        <p>Join our expert-led courses and start your journey towards mastering Arabic and Islamic studies.</p>
+        <a href="admission.html" class="btn btn-enroll">Enroll Now</a>
+    </section>
+    
+    <!-- FAQs Section -->
+    <section class="container text-center faq-section">
+        <h2>FAQs</h2>
+        <select id="faqDropdown" class="form-select w-50 mx-auto">
+            <option value="">Select a question</option>
+            <option value="faq1">How do I enroll?</option>
+            <option value="faq2">Are the classes live or recorded?</option>
+            <option value="faq3">Do I need prior knowledge of Arabic?</option>
+            <option value="faq4">What is the cost of enrollment?</option>
+            <option value="faq5">Do you provide certificates?</option>
+            <option value="faq6">How can I contact support?</option>
+        </select>
+
+        <div class="mt-3">
+            <div id="faq1" class="faq-answer">Sign up and choose your preferred course!</div>
+            <div id="faq2" class="faq-answer">We offer both live and recorded sessions for flexibility.</div>
+            <div id="faq3" class="faq-answer">No, we offer beginner, intermediate, and advanced courses.</div>
+            <div id="faq4" class="faq-answer">We have multiple pricing plans. Please visit our Pricing section for details.</div>
+            <div id="faq5" class="faq-answer">Yes, we provide certificates upon course completion.</div>
+            <div id="faq6" class="faq-answer">You can email us at info@salahuddeenacademy.com or visit our Contact Us page.</div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p><i class="fas fa-book"></i> Salahud Deen Academy &copy; 2025 All rights reserved</p>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html>

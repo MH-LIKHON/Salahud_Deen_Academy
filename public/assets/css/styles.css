@@ -1,0 +1,726 @@
+/*********************************
+ * GENERAL STYLING
+ *********************************/
+
+/* Set font, background, and layout for the entire page */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #2C3E50, #4C4C4C, #B0A08B);
+    background-attachment: fixed;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/*********************************
+ * SOCIAL MEDIA & TOP BAR
+ *********************************/
+
+/* Top bar for contact & social media links */
+.top-bar {
+    background: linear-gradient(135deg, #232526, #414345);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Social media & contact links */
+.top-bar a {
+    color: white;
+    margin: 0 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for social media icons */
+.top-bar a:hover {
+    transform: scale(1.2);
+    color: #ff9800;
+}
+
+/*********************************
+ * NAVIGATION BAR
+ *********************************/
+
+/* Navbar background, padding, and shadow */
+.navbar {
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 50px;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Navigation link styling */
+.navbar-nav .nav-link {
+    color: white !important;
+    font-size: 16px;
+    padding: 10px 15px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Underline animation effect on hover */
+.navbar-nav .nav-link::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #ff9800;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+/* Expand underline effect on hover */
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+/*********************************
+ * Enroll Section
+ *********************************/
+
+/* Enroll button styling */
+.btn-enroll {
+    background-color: #ff9800;
+    border: none;
+    padding: 12px 25px;
+    font-size: 18px;
+    color: white;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect for enroll button */
+.btn-enroll:hover {
+    background-color: #ffb74d;
+    transform: scale(1.1);
+    box-shadow: 0px 5px 15px rgba(255, 152, 0, 0.5);
+}
+
+/* Centering the enroll section */
+.enroll {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Optional: Add background for visibility */
+.enroll {
+    color: white;
+    padding: 0px;
+    text-align: center;
+}
+
+/*********************************
+ * FAQ SECTION
+ *********************************/
+
+/* Padding for FAQ section */
+.faq-section {
+    padding-top: 100px;
+    padding-bottom: 0px;
+}
+
+/* Hide FAQ answers by default */
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+/*********************************
+ * FOOTER
+ *********************************/
+
+/* Footer background, text, and padding */
+.footer {
+    background: linear-gradient(135deg, #232526, #414345);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+
+
+/*********************************
+ * GENERAL RESPONSIVE STYLING
+ *********************************/
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    /* Adjusts top bar layout for mobile */
+    .top-bar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Enroll Section */
+    .enroll {
+        padding: 40px 15px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .enroll p {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-nav .nav-link::after {
+        width: 100%; /* Force full width underline */
+        background: #ff9800;
+    }
+}
+
+
+
+/* ================================= */
+/* ================================= */
+/* ================================= */
+/* == HOME PAGE == */
+/* ================================= */
+/* ================================= */
+/* ================================= */
+
+
+
+/*********************************
+ * MAIN CONTENT (WELCOME TEXT)
+ *********************************/
+
+/* Centering welcome text */
+.animated-text {
+    padding-top: 100px;
+    text-align: center;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Applying fade-in animation to welcome message */
+.animated-text h1 { 
+    color: #ff9800;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.animated-text p {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Delay animation for each text */
+.animated-text h1 { animation-delay: 0.2s; }
+.animated-text p:first-of-type { animation-delay: 0.5s; }
+.animated-text p:last-of-type { animation-delay: 0.8s; }
+
+/*********************************
+ * MASTER ARABIC SECTION
+ *********************************/
+
+/* Master Arabic Section */
+.master-arabic {
+    padding-top: 100px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+/* Master Arabic Section Title */
+.master-arabic h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff9800; /* Same orange color */
+}
+
+/* Feature Cards */
+.master-arabic .row .col-md-4 {
+    text-align: center;
+}
+
+/* Feature Cards Styling */
+.master-arabic .row .col-md-4 .p-4 {
+    background: #232526 !important; /* Ensure dark background */
+    color: white;
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Ensure Icons Match Teachers' Section */
+.master-arabic .row .col-md-4 .p-4 i {
+    font-size: 3rem;
+    color: #ff9800 !important; /* Force orange color */
+    margin-bottom: 10px;
+}
+
+/* Feature Card Hover Effect */
+.master-arabic .row .col-md-4 .p-4:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 152, 0, 0.5);
+}
+
+/*********************************
+ * FEATURED CARDS (WHY CHOOSE US)
+ *********************************/
+
+/* Centering text inside feature cards */
+.master-arabic .row .col-md-4 {
+    text-align: center;
+}
+
+/* Card container styling */
+.master-arabic .row .col-md-4 .p-4 {
+    background: #232526;
+    color: white;
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect for feature cards */
+.master-arabic .row .col-md-4 .p-4:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 152, 0, 0.5);
+}
+
+/*********************************
+ * HOME RESPONSIVE STYLING
+ *********************************/
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    /* Stack feature cards vertically */
+    .master-arabic .row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .master-arabic {
+        padding-top: 70px;
+    }
+}
+
+
+
+/* ================================= */
+/* ================================= */
+/* ================================= */
+/* == ABOUT PAGE == */
+/* ================================= */
+/* ================================= */
+/* ================================= */
+
+
+
+/*********************************
+ * ABOUT US SECTION
+ *********************************/
+
+/* About Us Section */
+.about-section {
+    padding-top: 150px;
+    text-align: center;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* About Section Heading */
+.about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff9800;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.2s;
+}
+
+/* About Section Paragraphs */
+.about-section p {
+    font-size: 1rem;
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    padding-bottom: 10px;
+}
+
+/* Staggered animation delays for paragraphs */
+.about-section p:first-of-type {
+    animation-delay: 0.5s;
+}
+
+.about-section p:last-of-type {
+    animation-delay: 0.8s;
+}
+
+/*********************************
+ * TEACHERS SECTION
+ *********************************/
+
+/* Teachers Section */
+.teachers-section {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 40px;
+}
+
+.teachers-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #ff9800;
+}
+
+/* Teacher Cards */
+.teacher-card {
+    background: #232526;
+    color: white;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.teacher-card i {
+    color: #ff9800;
+}
+
+.teacher-card h4 {
+    font-size: 1.4rem;
+    margin-top: 15px;
+}
+
+.teacher-card p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+/* Hover Effect */
+.teacher-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(255, 152, 0, 0.5);
+}
+
+/*********************************
+ * CONTACT SECTION
+ *********************************/
+
+/* Contact Section */
+.contact-section {
+    text-align: center;
+    padding: 60px 20px;
+    padding-top: 100px;
+    padding-bottom: 0px;
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff9800;
+}
+
+.contact-section p {
+    font-size: 1.1rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* Contact Links */
+.contact-section a {
+    color: #ff9800;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-section a:hover {
+    text-decoration: underline;
+}
+
+/*********************************
+ * RESPONSIVE DESIGN
+ *********************************/
+
+@media (max-width: 768px) {
+    .teachers-section{
+        padding: 50px 15px;
+        padding-bottom: 20px;
+    }
+
+    .teacher-card {
+        margin-bottom: 20px;
+    }
+
+    .about-section {
+        text-align: center;
+        padding-top: 150px;
+        padding-bottom: 30px;
+    }
+
+    .contact-section {
+        padding-top: 100px;
+    }
+}
+
+
+
+/* ================================= */
+/* ================================= */
+/* ================================= */
+/* == ADMISSION PAGE == */
+/* ================================= */
+/* ================================= */
+/* ================================= */
+
+
+
+/*********************************
+ * ADMISSION PAGE STYLING
+ *********************************/
+
+/* Add top padding to compensate for fixed navbar & social bar */
+.admission-section {
+    padding-top: 200px;
+    text-align: center;
+}
+
+/* Study Mode Cards */
+.study-options {
+    margin-top: 30px;
+}
+
+.study-card {
+    background: #232526;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    gap: 20px;
+}
+
+.study-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 152, 0, 0.5);
+}
+
+.study-card i {
+    color: #ff9800;
+    margin-bottom: 10px;
+}
+
+/*********************************
+ * ADMISSION FORM STYLING
+ *********************************/
+
+.admission-form {
+    margin-top: 0px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+    padding-top: 0px;
+}
+
+/* Form Fields */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Placeholder Styling */
+.form-control::placeholder {
+    color: #aaa;
+}
+
+/*********************************
+ * STEP-BY-STEP FORM TRANSITIONS
+ *********************************/
+
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/*********************************
+ * PRICE SECTION
+ *********************************/
+
+.price-section {
+    margin-top: 20px;
+}
+
+.price-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+}
+
+/*********************************
+ * BUTTONS
+ *********************************/
+
+.btn-next, .btn-accept {
+    background-color: #ff9800;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.btn-next:hover, .btn-accept:hover {
+    transform: scale(1.05);
+}
+
+/*********************************
+ * CONFIRMATION MESSAGE
+ *********************************/
+
+#confirmationMessage {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    background: #232526;
+    color: white;
+    border-radius: 8px;
+}
+
+/*********************************
+ * PRICE BANNER ABOVE FOOTER
+ *********************************/
+
+.price-banner {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, #ff9800, #ffb74d);
+    color: white;
+    animation: glow 1.5s infinite alternate;
+    margin-top: 50px;
+    padding-top: 15px;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px white;
+    }
+    100% {
+        text-shadow: 0 0 15px white;
+    }
+}
+
+/*********************************
+ * FADE-IN ANIMATION
+ *********************************/
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*********************************
+ * RESPONSIVE STYLING
+ *********************************/
+
+/* Adjustments for tablets and mobile devices */
+@media (max-width: 991px) {
+    .admission-section {
+        padding: 140px 15px 60px;
+    }
+    
+    .study-options {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .study-card {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 15px
+    }
+    
+    .admission-form {
+        max-width: 90%;
+    }
+    
+    .price-banner {
+        font-size: 1rem;
+    }
+}
+
+/* Adjustments for smaller mobile screens */
+@media (max-width: 576px) {
+    .admission-section {
+        padding: 150px 10px 50px;
+    }
+    
+    .study-options {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .study-card {
+        width: 100%;
+        min-width: 100%;
+        margin-bottom: 15px
+    }
+    
+    .price-banner {
+        font-size: 0.9rem;
+    }
+}
